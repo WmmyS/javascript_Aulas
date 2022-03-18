@@ -1,0 +1,14 @@
+=> vai criar o packge.json sem perguntas com informações levantadas do diretório do arquivo
+npm init -y
+
+=> vai criar o package.json questionando informações do projeto
+npm init
+
+=> instalar dependências do babel e webpack
+npm i --save-dev @babel/core @babel/preset-env @babel/cli babel-loader webpack webpack-cli regenerator-runtime core-js@2
+
+=> Roda o comando
+npm run gera
+
+=> São dependências do projeto
+npm i core-js regenerator-runtime

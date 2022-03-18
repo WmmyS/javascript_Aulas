@@ -1,0 +1,42 @@
+[
+    {
+        "nome": "Miguel",
+        "email": "miguel@email.com.br",
+        "salario": 27211,
+        "estado": "MG",
+        "empresa": "Facebook",
+        "idade": 34,
+        "sexo": "M",
+        "cpf": "352.456.589.19"
+    },
+    {
+        "nome": "Wesley",
+        "email": "wesley@email.com.br",
+        "salario": 27211,
+        "estado": "SP",
+        "empresa": "Google",
+        "idade": 30,
+        "sexo": "M",
+        "cpf": "365.435.555.17"
+    },
+    {
+        "nome": "Rafael",
+        "email": "rafael@email.com.br",
+        "salario": 27211,
+        "estado": "RJ",
+        "empresa": "AgroTI",
+        "idade": 24,
+        "sexo": "M",
+        "cpf": "389.421.570.14"
+    },
+    {
+        "nome": "Francieli",
+        "email": "francieli@email.com.br",
+        "salario": 27211,
+        "estado": "CE",
+        "empresa": "Renner",
+        "idade": 23,
+        "sexo": "F",
+        "cpf": "745.456.989.59"
+    }
+]
