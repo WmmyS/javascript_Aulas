@@ -1,0 +1,28 @@
+npm init -y
+
+=> vai instalar a última versão e atualizar quando lamçarem novas
+npm install express
+
+=> Assim vai instalar só a última versão e não atualizar
+npm install express -E
+
+=> conlocar o express só para desenvolvimento
+npm install express --save-dev
+
+=> conlocar o express só para produção
+npm install express --save-prod
+
+=> versões específicas
+npm install express@4.1.1 --save-dev
+
+=> desinstalar
+npm uninstall express
+
+=>verificar todos os pacotes instalados e seus subpacotes
+npm ls
+
+=> varificar só os pacotes de instalamos (só o primeiro nível), aumentando vai aumentando os níveis
+npm ls --dapth=0
+
+=> varificar pacotes desatualizados
+npm outdated

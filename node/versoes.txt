@@ -1,0 +1,10 @@
+^ atualizar a minor e a patch
+~ atualiza só o patch
+
+
+2.      1.      0
+major   minor   patch
+
+patch => correções de bugs e reparos de funcionalidades
+minor => adição de novas funcionalidades
+major => alteração de compatibilidade entre versões (atualização mais perigosa)
