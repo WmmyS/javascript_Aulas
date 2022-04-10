@@ -16,11 +16,13 @@ mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifi
     // Caso ocorra um erro de conexão o erro será mostrado no log
     .catch(e => console.log(e));
 
-// Criará uma sessão para coleta e confirmação de dados do usuário
+// Criará uma sessão para coleta e confirmação de dados do browser do usuário
 const session = require('express-session');
+
+// Usado para persistir na base de dados
 const MongoStore = require('connect-mongo');
 
-// Auxilia em envio de mensagens de aplicação
+// Auxilia em envio de mensagens de aplicação para uma sessão
 const flash = require('connect-flash');
 
 // Adiciona o arquivo de administração de rotas
@@ -33,11 +35,14 @@ const csrf = require('csurf');
 
 const {middlewareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middleware/middleware');
 
-// Usado para restringir a utilização de nossa API exclusivamente ao usuário de acesso
+// Recomendado pelos desenvolvedores do Express, auxilia na segurança da API criada
 app.use(helmet());
 
-// Usado para receber o objeto no post
+// Usado para receber formulários através do post para a aplicação
 app.use(express.urlencoded({extended: true}));
+
+// Executa o parse de json para a aplicação
+app.use(express.json());
 
 // Usar um diretório para acessar aquivos estáticos
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -56,10 +61,14 @@ const sessionOptions = session({
 
 app.use(sessionOptions);
 app.use(flash());
+
+// Arquivos renderizados para visualização
 app.set('views', path.resolve(__dirname, 'src', 'views'));
+
+// engine a ser utilizada para renderisação de arquivos
 app.set('view engine', 'ejs');
 
-// Aplica um token para ser verificado e consumido pela API
+// Aplica um token para ser verificado e consumido pela API nos formulários
 app.use(csrf());
 
 // Nossos próprios middlewares
