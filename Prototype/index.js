@@ -12,4 +12,6 @@ const objB = {
 // Declarar Pai de um objeto B o objeto A o
 Object.setPrototypeOf(objB, objA);
 
+const teste = 'teste';
+
 // Terminar a aula ...
